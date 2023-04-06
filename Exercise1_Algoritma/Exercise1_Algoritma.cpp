@@ -1,20 +1,56 @@
-// Exercise1_Algoritma.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+// 1. Algorithma dibutuhkan untuk menyelesaikan suatu masalah karena dengan algoritma kita dapat menyelesaikan suatu masalah secara terstruktur atau runtut.
+//   Selain itu kita juga bisa mengasah skill problem solving kita dan juga critical thinking.
 
-#include <iostream>
+// 2. Algoritma diklasifikasikan menjadi 2, yaitu : Quadratic dan Loglinear
 
-int main()
-{
-    std::cout << "Hello World!\n";
+// 3. Faktor yang mempengaruhi efisiensi waktu eksekusi program adalah
+//   - Speed of the machine
+//   - Compiller
+//   - OS
+//   - Bahasa Pemrograman
+//   - Size of the input
+
+// 4. Menurut saya Quick sort
+//    Karena algoritma itu paling efisien, dan juga algoritma ini cara kerja nya dengan dipecah pecah lalu dibuat 3 patokan yaitu :
+//    pivot = pijakan, Greather value = besar pertama dari pivot, Smaller value = Kecil pertama dari kanan ke kiri
+//    
+
+// 5. Quadratic : bublesort, insertion sort, shell sort
+//	  Loglinear : quick sort, selection sort, merge sort
+
+// 6. Program Algoritma Merge sort
+
+#include<iostream>
+using namespace std;
+
+
+int farras[56];
+int n;
+
+void input() {
+	while (true)
+	{
+		cout << "Masukkan panjang element array: ";
+		cin >> n;
+
+		if (n <= 56) {
+			break;
+		} 
+		else
+		{
+			cout << "\nMaksimum panjang array yang dapat dimasukkan adalah 20" << endl;
+		}
+	}
+	cout << endl;															// Membuat jarak per baris program
+	cout << "================================================" << endl;		// Membuat tampilan susunan data element array
+	cout << "===========Masukkan Element Array===============" << endl;
+	cout << "================================================" << endl;
+
+	for (int i = 0; i < n; i++)										// Menggunakan perulangan for untuk menyimpan  data pada array
+	{
+		cout << "Data ke-" << (i + 1) << ": ";
+		cin >> farras[i];												// Menyimpan nilai data n kedalam array arr
+	}
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
