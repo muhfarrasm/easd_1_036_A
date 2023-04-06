@@ -95,15 +95,26 @@ void Mergesort(int low, int high) {
 }
 
 
-
 void display() {
-	cout << endl;
-	cout << "===========================" << endl;
-	cout << "Elemen Array yang telah tersusun" << endl;
-	cout << "===========================" << endl;
-	for (int mf = 0; mf < n; mf++) {
-		cout << farras[mf] << endl;
-	}
-	cout << endl;
+	cout << "\n------------" << endl;
+	cout << "\nSorted Array" << endl;
+	cout << "\n------------" << endl;
 
+	for (int i = 0; i < n; i++)
+	{
+		cout << farras[i] << " ";
+
+	}
+}
+
+
+int main()
+{
+	input();
+	//sort the array using quick sort
+	Mergesort(0, n - 1);
+	display();
+	
+
+	return 0;
 }
