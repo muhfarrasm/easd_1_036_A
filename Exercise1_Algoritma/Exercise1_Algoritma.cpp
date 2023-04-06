@@ -111,10 +111,7 @@ void display() {
 int main()
 {
 	input();
-	//sort the array using quick sort
 	Mergesort(0, n - 1);
 	display();
-	
-
 	return 0;
 }
