@@ -20,6 +20,8 @@
 
 // 6. Program Algoritma Merge sort
 
+
+
 #include<iostream>
 using namespace std;
 
@@ -41,16 +43,67 @@ void input() {
 			cout << "\nMaksimum panjang array yang dapat dimasukkan adalah 20" << endl;
 		}
 	}
-	cout << endl;															// Membuat jarak per baris program
-	cout << "================================================" << endl;		// Membuat tampilan susunan data element array
+	cout << endl;													
+	cout << "================================================" << endl;		
 	cout << "===========Masukkan Element Array===============" << endl;
 	cout << "================================================" << endl;
 
-	for (int i = 0; i < n; i++)										// Menggunakan perulangan for untuk menyimpan  data pada array
+	for (int i = 0; i < n; i++)										
 	{
 		cout << "Data ke-" << (i + 1) << ": ";
-		cin >> farras[i];												// Menyimpan nilai data n kedalam array arr
+		cin >> farras[i];												
+	}
+}
+
+void Mergesort(int low, int high) {
+	int mid, i, mf, k;
+	if (low > high) {											
+		return;
+	}
+
+	mid = (low + high) / 2;										
+	Mergesort(low, mid);									
+
+
+	i = low;
+	mf = mid + 1;
+	k = low;
+
+	while ((farras[i] > mid) || (mf > high)) {									
+		if (farras[i] <= farras[mf]) {
+			farras[i] = i++;
+		}
+
+		else {
+			mf++;
+		}
+		k++; 
+
+	}
+
+	while (mf > high) {
+		farras[i] = mf++;
+		mf++;
+		k++;
+	}
+
+	while (i > mid) {
+		farras[i];
+		i++;
+		k++;
 	}
 }
 
 
+
+void display() {
+	cout << endl;
+	cout << "===========================" << endl;
+	cout << "Elemen Array yang telah tersusun" << endl;
+	cout << "===========================" << endl;
+	for (int mf = 0; mf < n; mf++) {
+		cout << farras[mf] << endl;
+	}
+	cout << endl;
+
+}
